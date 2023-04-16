@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Prototype Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, pink, white);
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 25px 0;
+      }
+      nav {
+        border-bottom: 1px solid black;
+      }
+      li {
+        padding: 15px;
+        border: 1px solid lightgrey;
+        cursor: pointer;
+        background-color: lightblue;
+        margin: 0 10px;
+      }
+      li:hover {
+        background-color: lightgreen;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+      }
+      section {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      .language-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 45px;
+        color: white;
+        cursor: pointer;
+      }
+      .language-button:hover {
+        background-color: white;
+        color: lightgrey;
+      }
+      .c {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .p {
+        font-family: papyrus, fantasy;
+        font-weight: bold;
+      }
+      .m {
+        font-size: 22px;
+      }
+      .n {
+         background-color: lightgrey;
+         margin: 0 auto;
+         max-width: 500px;
+         border-radius: 10px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-top: 5px;
+      }
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-top: 10px;
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        font-size: 16px;
+      }
+      button[type="reset"] {
+        background-color: red;
+      }
+      button[type="submit"]:hover {
+        background-color: darkgreen;
+      }
+      button[type="reset"]:hover {
+        background-color: darkred;
+      }
+      .cent {
+      text-align:center;
+      font-size: 24px;
+      }
+      @media screen and (max-width: 800px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+        ul {
+          flex-wrap: wrap;
+        }
+        li {
+          width: 100%;
+          text-align: center;
+          margin: 5px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Prototype Page</h1>
+      <div class="language-button">EN</div>
+    </header>
+    <nav>
+        <img src="/Program Files/Task_2_Daniil_Sharov/assets/img/Logo.png" alt="Logo" style="height: 100px;">
+        <ul style="display: flex; justify-content: center;">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </nav>
+    <div >
+      <img src="/Program Files/Task_2_Daniil_Sharov/assets/img/logo 2.png" class="c" alt="Logo 2" style="height: 350px;">
+    </div>
+    <section class="p">
+      <h2>About This Page</h2>
+      <p class="m">This is a simple web page with a simple layout.</p>
+    </section>
+    <section class="n">
+    <form>
+      <p class="cent">Contact us</p>
+      <p>Name: <input type="text" id="name"/></p>
+      <p>Surname: <input type="text" id="surname"/></p>
+      <p>Phone number: <input type="text" id="phone"/></p>
+      <p>E-mail: <input type="email" id="email"/></p>
+      <ul>
+      <p> Year:  <input type="text" size="4" id="year"/></p>
+      <p> Month:  <input type="text" size="2" id="month"></p>
+      <p> Day:  <input type="text" size="2" id="day"></p>
+      </ul>
+      <p><button type="reset" onclick="resetForm">Reset</button></p>
+      <p><button type="submit">Submit</button></p>
+      </form>
+    </section>
+    <script>
+      function resetForm() {
+        document.getElementById("name").value = "";
+        document.getElementById("surname").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("year").value = "";
+        document.getElementById("month").value = "";
+        document.getElementById("day").value = "";
+      }
+    </script>
+    <footer>
+      <p>&copy; 2023</p>
+    </footer>
+  </body>
+</html>
